@@ -1,0 +1,193 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Helvetica', Arial, sans-serif; /* Set default font to Helvetica */
+    background-color: #0c0c0c; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+/* Header Styles */
+header {
+    background-color: #0c0c0c;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #0c0c0c;
+    background-color: #00bcd4;
+    border-radius: 5px;
+}
+
+/* Main Section Styles */
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    min-height: calc(100vh - 80px);
+}
+
+#home .content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+}
+
+#home h2 {
+    font-size: 2em;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#home h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#home .highlight {
+    color: #00bcd4;
+}
+
+#home p {
+    margin: 20px 0;
+    color: #bbbbbb;
+    line-height: 1.6;
+}
+
+#home .social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+#home .social-icons a {
+    color: #00bcd4;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+#home .social-icons a:hover {
+    color: #ffffff;
+}
+
+#home .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #00bcd4;
+    border-radius: 5px;
+    color: #00bcd4;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#home .btn:hover {
+    background-color: #00bcd4;
+    color: #0c0c0c;
+}
+
+/* Image Container Styles */
+.image-container {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.image {
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 50%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+/* Blinking Cursor */
+.blinking-cursor {
+    font-weight: bold;
+    font-size: 1em;
+    color: #00bcd4;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Button Styles */
+#home .btn {
+    background-color: #00bcd4;
+    color: #0c0c0c;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#home .btn:hover {
+    background-color: #00a0c4;
+    transform: scale(1.05);
+}
